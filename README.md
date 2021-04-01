@@ -1,6 +1,6 @@
-# A/V Accessability Research Project
+# A/V Accessability Research Project 🎥
 
-## Media for Everyone
+## Media for Everyone 🎬
 
 ### **Interactive Media Design** Level 4 - Multimedia & Authoring 4 at Fanshawe College, London.
 
