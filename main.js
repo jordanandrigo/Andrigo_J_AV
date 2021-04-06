@@ -7,8 +7,6 @@ const volume = document.querySelector('#volume');
 
 const fullscreen = document.querySelector('#fullscreen');
 
-
-
 const audioIndicator = document.querySelector('#audio');
 
 const video = document.querySelector('video');
@@ -47,8 +45,7 @@ function durationHandler() {
 volume.addEventListener('input', volumeHandler);
 
 function volumeHandler() {
-  console.log(volume.value);
-  // volume
+  console.log(volume.value); // volume
   video.volume = volume.value/100;
 }
 
@@ -70,10 +67,7 @@ function fullscreenHandler() {
       document.webkitExitFullscreen();
     }
   }
-
 }
-
-
 
 function loopDurationUpdate() {
   duration.value = Math.round((video.currentTime/video.duration)*100);
