@@ -4,29 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Media Player</title>
+  <title>Jordan's Media Player</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="videoplayer">
-    <!-- Only leave one media uncommented -->
+    <!-- Only leave one media uncommented at a time to play -->
         <video src="media/now_and_then.mp4"></video>
         <!-- <video src="media/three_little_birds.mp3"></video> -->
         <!-- <video src="media/gilmore_girls.mp4"></video> -->
     <div class="controls">
-      <button id="play-pause">PLAY</button>
+      <button id="playPause">PLAY</button>
       <input type="range" min="1" max="100" value="1" class="slider" id="duration">
       <div>
         <label for="volume">Volume:</label>
-        <input type="range" min="1" max="100" value="100" class="slider slider-small" id="volume">
+        <input type="range" min="1" max="100" value="100" class="slider slider-volume" id="volume">
       </div>
       <button id="fullscreen">FullScreen</button>
-      <button id="speed">Speed(1x)</button>
+      
     </div>
-
-    <!--  if audio show them it is an audio file -->
-    <h1 id="audio">Audio File - No Preview</h1>
-
   </div>
   <script src="main.js"></script>
 </body>
