@@ -8,7 +8,7 @@ This is project is to display a preview of the finished Roku app. Some audio and
 
 ### How to Run
 
-**1.**  Git clone the repo onto your hard drive and run the scripts `npm run start-ui` and `npm run start-dev`.
+**1.**  Git clone the repo onto your hard drive and run index.html page in your browser.
 
 
 ### Tools Used
