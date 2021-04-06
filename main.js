@@ -1,11 +1,15 @@
-const playPause = document.querySelector('#play-pause');
+
+const playPause = document.querySelector('#playPause');
+
 const duration = document.querySelector('#duration');
+
 const volume = document.querySelector('#volume');
+
 const fullscreen = document.querySelector('#fullscreen');
-const speed = document.querySelector('#speed');
+
+
 
 const audioIndicator = document.querySelector('#audio');
-
 
 const video = document.querySelector('video');
 const videoplayer = document.querySelector('#videoplayer');
@@ -14,10 +18,9 @@ if (video.src.includes('.mp3') || video.src.includes('.wav')) {
   audioIndicator.style.display = 'block';
 }
 
-// click the video to play or pause
-
+// click the video to pause or play
 video.addEventListener('click', playPauseHandler);
-// Play and pause 
+// the pause and play here
 playPause.addEventListener('click', playPauseHandler);
 
 function playPauseHandler() {
@@ -31,21 +34,21 @@ function playPauseHandler() {
   }
 }
 
-// duration
+// duration here
 duration.addEventListener('input', durationHandler);
 
 function durationHandler() {
   console.log(duration.value);
-  // set the new time
+  // set new time here
   video.currentTime = (duration.value/100) * video.duration;
 }
 
-// volume
+// media volume
 volume.addEventListener('input', volumeHandler);
 
 function volumeHandler() {
   console.log(volume.value);
-  // set the new volume
+  // volume
   video.volume = volume.value/100;
 }
 
@@ -54,8 +57,6 @@ fullscreen.addEventListener('click', fullscreenHandler);
 
 function fullscreenHandler() {
   console.log('toggling fullscreen')
-
-  // if its not fullscreen
   if (!window.fullScreen) {
     if (videoplayer.requestFullscreen) {
       videoplayer.requestFullscreen();
@@ -72,5 +73,13 @@ function fullscreenHandler() {
 
 }
 
+
+
+function loopDurationUpdate() {
+  duration.value = Math.round((video.currentTime/video.duration)*100);
+  setTimeout(() => {
+    loopDurationUpdate();
+  }, 1000);
+}
 
 loopDurationUpdate()
